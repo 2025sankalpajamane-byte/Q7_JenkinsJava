@@ -1,12 +1,23 @@
 public class Student {
+    private final int rollNumber;
+    private final String name;
+    private final String department;
+
+    public Student(int rollNumber, String name, String department) {
+        this.rollNumber = rollNumber;
+        this.name = name;
+        this.department = department;
+    }
+
+    public void displayDetails() {
+        System.out.println("Student Details");
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+    }
+
     public static void main(String[] args) {
-        String name = "Sankalp Ajamane";
-        int rollNo = 3;
-        String branch = "Information Technology - VESIT";
-        System.out.println("=== Student Details ===");
-        System.out.println("Name   : " + name);
-        System.out.println("Roll No: " + rollNo);
-        System.out.println("Branch : " + branch);
-        System.out.println("Build and Execution via Jenkins Successful!");
+        Student student = new Student(101, "Asha", "Information Technology");
+        student.displayDetails();
     }
 }
